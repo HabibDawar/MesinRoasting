@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Detail {{ mesin['judul'] }} - RoastingKopi.id{% endblock %}
+
+{% block hero_content %}
+  <h1>{{ mesin['judul'] }}</h1>
+  <p class="hero-subtitle">Detail spesifikasi dan fitur mesin roasting kopi</p>
+{% endblock %}
+
+{% block content %}
+  <section class="katalog-section">
+    <div class="container">
+      <div class="produk-detail">
+        <div class="detail-container">
+          <div class="detail-image">
+            <img src="{{ url_for('static', filename='img/' + mesin['gambar']) }}" alt="{{ mesin['judul'] }}">
+          </div>
+          <div class="detail-content">
+            <h2>{{ mesin['judul'] }}</h2>
+            <div class="detail-price">{{ mesin['harga'] | format_rupiah }}</div>
+            
+            <div class="detail-specs">
+              <h3>Spesifikasi Teknis</h3>
+              <ul>
+                {% for spec in mesin['spesifikasi'] %}
+                <li>{{ spec }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            
+            <div class="detail-features">
+              <h3>Keunggulan</h3>
+              <ul>
+                {% for keunggulan in mesin['keunggulan'] %}
+                <li><i class="fas fa-check-circle"></i> {{ keunggulan }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            
+            <a href="{{ url_for('kontak') }}" class="btn btn-primary">
+              <i class="fas fa-envelope"></i> Konsultasi Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

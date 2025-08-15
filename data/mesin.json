@@ -1,0 +1,172 @@
+[
+  {
+    "kapasitas": "1KG",
+    "judul": "MESIN ROASTING KOPI KAPASITAS 1 KG",
+    "harga": 12000000,
+    "gambar": "1kg.jpg",
+    "model": "RR-100",
+    "dimensi": "80cm x 60cm x 120cm",
+    "daya": "1500W",
+    "berat": "85kg",
+    "spesifikasi": [
+      "Tabung roasting full stainless steel (D 20 x P 25 cm)",
+      "Rangka kuat dari siku besi dengan cover plat besi & stainless steel",
+      "Sistem double jacket untuk kestabilan panas",
+      "Single blower multifungsi: pendinginan & pengeluaran asap",
+      "Dilengkapi cooling tray untuk pendinginan cepat",
+      "Penampung asap & sampah, kaca pengintai, termometer",
+      "Kontrol otomatis: drum, blower, cooling, lampu + speed control",
+      "Kompor modifikasi hemat bahan bakar",
+      "Sistem penggerak elektrik dengan 2 dinamo dan gearbox rantai"
+    ],
+    "keunggulan": [
+      "Desain customizable",
+      "Cocok untuk usaha kecil dan pemula"
+    ]
+  },
+  {
+    "kapasitas": "3KG",
+    "judul": "MESIN ROASTING KOPI KAPASITAS 3 KG",
+    "harga": 15000000,
+    "gambar": "3kg.jpg",
+    "model": "RR-300",
+    "dimensi": "100cm x 70cm x 140cm",
+    "daya": "2200W",
+    "berat": "120kg",
+    "spesifikasi": [
+      "Drum stainless steel (2mm), D 25 cm, P 35 cm",
+      "Dinamo listrik 1/2 HP & 1/4 HP untuk pendingin",
+      "Konsumsi daya hanya 220W",
+      "Single blower multifungsi",
+      "Cyclone Separator Filter",
+      "Panel tombol kontrol lengkap",
+      "Kompor modifikasi + regulator",
+      "Kaca pengintai, termometer, roda mobilitas"
+    ],
+    "keunggulan": [
+      "Efisiensi tinggi",
+      "Hasil konsisten dan premium",
+      "Desain kokoh, bisa dikustomisasi"
+    ]
+  },
+  {
+    "kapasitas": "5KG",
+    "judul": "MESIN ROASTING KOPI KAPASITAS 5 KG",
+    "harga": 16000000,
+    "gambar": "5kg.jpg",
+    "model": "RR-500",
+    "dimensi": "120cm x 70cm x 160cm",
+    "daya": "2500W",
+    "berat": "100kg",
+    "spesifikasi": [
+      "Drum stainless 2mm + sistem double jacket",
+      "Body & cooling tray full stainless",
+      "Rangka besi kokoh + roda",
+      "Cyclone separator",
+      "Panel kelistrikan lengkap",
+      "Pengapian gas modifikasi",
+      "Dimensi 120x70x160 cm, berat ±100kg"
+    ],
+    "keunggulan": [
+      "Kualitas premium",
+      "Efisiensi tinggi skala besar",
+      "Desain tahan lama & mudah digunakan"
+    ]
+  },
+  {
+    "kapasitas": "10KG",
+    "judul": "MESIN ROASTING KOPI KAPASITAS 10 KG",
+    "harga": 28000000,
+    "gambar": "10kg.jpg",
+    "model": "RR-1000",
+    "dimensi": "140cm x 80cm x 180cm",
+    "daya": "3000W",
+    "berat": "150kg",
+    "spesifikasi": [
+      "Drum stainless 2mm, D 30 cm, P 50 cm",
+      "Cooling tray full stainless D 60 cm, T 25 cm",
+      "Kompor gas modifikasi",
+      "Kaca pengintai, checker, termometer manual",
+      "Blower + cyclone separator",
+      "Dinamo 1/2 HP & 1/4 HP",
+      "Panel: Drum, Cooling, Blower, Lampu, Speed Control"
+    ],
+    "keunggulan": [
+      "Roasting konsisten, rasa dan aroma terjaga",
+      "Efisiensi bahan bakar & listrik",
+      "Customizable dan user-friendly"
+    ]
+  },
+  {
+    "kapasitas": "15KG",
+    "judul": "MESIN ROASTING KOPI KAPASITAS 15 KG",
+    "harga": 30000000,
+    "gambar": "15kg.jpg",
+    "model": "RR-1500",
+    "dimensi": "160cm x 90cm x 200cm",
+    "daya": "3500W",
+    "berat": "200kg",
+    "spesifikasi": [
+      "Drum stainless 2mm, D 35 cm, P 60 cm",
+      "Cooling tray full stainless",
+      "Kaca pengintai, checker, termometer",
+      "Blower + cyclone separator",
+      "2 Dinamo listrik efisien",
+      "Pengapian gas modifikasi + regulator",
+      "Panel: Drum, Cooling, Blower, Lampu"
+    ],
+    "keunggulan": [
+      "Kualitas terjaga, efisiensi tinggi",
+      "Tahan lama dan mudah digunakan",
+      "Customizable untuk bisnis Anda"
+    ]
+  },
+  {
+    "kapasitas": "20KG",
+    "judul": "MESIN ROASTING KOPI KAPASITAS 20 KG",
+    "harga": 34000000,
+    "gambar": "20kg.jpg",
+    "model": "RR-2000",
+    "dimensi": "180cm x 100cm x 220cm",
+    "daya": "4000W",
+    "berat": "250kg",
+    "spesifikasi": [
+      "Drum stainless 2mm + double jacket",
+      "Body full stainless",
+      "Cooling tray higienis + cyclone separator",
+      "Kaca pengintai, checker, lampu, termometer",
+      "2 Dinamo listrik efisien",
+      "Gas modifikasi + regulator",
+      "Panel: Drum, Cooling, Blower, Lampu, Speed Control"
+    ],
+    "keunggulan": [
+      "Kualitas premium dan efisiensi tinggi",
+      "Cocok untuk skala besar",
+      "Desain awet dan intensif"
+    ]
+  },
+  {
+    "kapasitas": "25KG",
+    "judul": "MESIN ROASTING KOPI KAPASITAS 25 KG",
+    "harga": 36000000,
+    "gambar": "25kg.jpg",
+    "model": "RR-2500",
+    "dimensi": "200cm x 110cm x 240cm",
+    "daya": "4500W",
+    "berat": "300kg",
+    "spesifikasi": [
+      "Drum stainless 2mm + double jacket",
+      "Body + cooling tray full stainless",
+      "Blower + cyclone separator",
+      "Kaca pengintai, checker, lampu, termometer",
+      "2 Dinamo listrik 1 PK (400W)",
+      "Gas modifikasi + regulator",
+      "Panel: Drum, Cooling, Blower, Lampu, Speed Control"
+    ],
+    "keunggulan": [
+      "Efisiensi tinggi untuk produksi industri",
+      "Roasting konsisten rasa dan aroma",
+      "Desain tahan lama & kontrol lengkap"
+    ]
+  }
+]
