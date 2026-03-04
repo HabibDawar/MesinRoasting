@@ -140,49 +140,82 @@
       <div class="section-divider"></div>
     </div>
 
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="testimonial-quote">"</div>
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+    <!-- Testimoni Slider -->
+    <div class="testimonial-slider-wrapper">
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">Mesin roasting dari RoastingKopi.id sudah kami gunakan 3 tahun tanpa masalah.
+            Hasil roasting konsisten dan layanan purna jualnya sangat baik.</p>
+          <div class="testimonial-author">
+            <img src="{{ url_for('static', filename='img/testimoni1.jpg') }}" alt="Budi Santoso"
+              class="testimonial-avatar" loading="lazy">
+            <div class="testimonial-info">
+              <h4>Budi Santoso</h4>
+              <span>Pemilik Kedai Kopi Budiman, Bandung</span>
+            </div>
+          </div>
         </div>
-        <p class="testimonial-text">Mesin roasting dari RoastingKopi.id sudah kami gunakan 3 tahun tanpa masalah. Hasil
-          roasting konsisten dan layanan purna jualnya sangat baik.</p>
-        <div class="testimonial-author">
-          <img src="{{ url_for('static', filename='img/testimoni1.jpg') }}" alt="Budi Santoso"
-            class="testimonial-avatar" loading="lazy">
-          <div class="testimonial-info">
-            <h4>Budi Santoso</h4>
-            <span>Pemilik Kedai Kopi Budiman, Bandung</span>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">Sebagai pemula di bisnis kopi, saya sangat terbantu dengan pelatihan yang
+            diberikan. Mesinnya mudah dioperasikan dengan hasil maksimal.</p>
+          <div class="testimonial-author">
+            <img src="{{ url_for('static', filename='img/testimoni2.jpg') }}" alt="Ani Wijaya"
+              class="testimonial-avatar" loading="lazy">
+            <div class="testimonial-info">
+              <h4>Ani Wijaya</h4>
+              <span>Pemilik Roastery Ani, Yogyakarta</span>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="testimonial-quote">"</div>
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-text">Sebagai pemula di bisnis kopi, saya sangat terbantu dengan pelatihan yang diberikan.
-          Mesinnya mudah dioperasikan dengan hasil maksimal.</p>
-        <div class="testimonial-author">
-          <img src="{{ url_for('static', filename='img/testimoni2.jpg') }}" alt="Ani Wijaya" class="testimonial-avatar"
-            loading="lazy">
-          <div class="testimonial-info">
-            <h4>Ani Wijaya</h4>
-            <span>Pemilik Roastery Ani, Yogyakarta</span>
-          </div>
-        </div>
+      <!-- Dots indicator -->
+      <div class="slider-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
       </div>
     </div>
+
+    <script>
+      (function () {
+        let current = 0;
+        const slider = document.getElementById('testimonialSlider');
+        const dots = document.querySelectorAll('.dot');
+        const total = dots.length;
+        let autoTimer = setInterval(nextSlide, 4000);
+
+        function goToSlide(n) {
+          current = n;
+          slider.style.transform = 'translateX(-' + (100 * current) + '%)';
+          dots.forEach((d, i) => d.classList.toggle('active', i === current));
+          clearInterval(autoTimer);
+          autoTimer = setInterval(nextSlide, 4000);
+        }
+
+        function nextSlide() {
+          goToSlide((current + 1) % total);
+        }
+
+        window.goToSlide = goToSlide;
+
+        // Touch/swipe support
+        let startX = 0;
+        slider.addEventListener('touchstart', e => startX = e.touches[0].clientX, { passive: true });
+        slider.addEventListener('touchend', e => {
+          const diff = startX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) goToSlide(diff > 0 ? Math.min(current + 1, total - 1) : Math.max(current - 1, 0));
+        }, { passive: true });
+      })();
+    </script>
   </div>
 </section>
 
