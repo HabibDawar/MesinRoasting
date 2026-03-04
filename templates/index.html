@@ -178,42 +178,70 @@
           </div>
         </div>
       </div>
-      <!-- Dots indicator -->
-      <div class="slider-dots">
-        <span class="dot active" onclick="goToSlide(0)"></span>
-        <span class="dot" onclick="goToSlide(1)"></span>
+      <!-- Dots (hanya muncul di mobile) -->
+      <div class="slider-dots" id="sliderDots">
+        <button class="dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+        <button class="dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
       </div>
     </div>
 
     <script>
       (function () {
-        let current = 0;
-        const slider = document.getElementById('testimonialSlider');
-        const dots = document.querySelectorAll('.dot');
-        const total = dots.length;
-        let autoTimer = setInterval(nextSlide, 4000);
+        var current = 0;
+        var total = 2;
+        var autoTimer;
+        var slider = document.getElementById('testimonialSlider');
+        var dots = document.querySelectorAll('.dot');
+
+        function isMobile() {
+          return window.innerWidth < 768;
+        }
 
         function goToSlide(n) {
+          if (!isMobile()) return;
           current = n;
           slider.style.transform = 'translateX(-' + (100 * current) + '%)';
-          dots.forEach((d, i) => d.classList.toggle('active', i === current));
+          dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+          resetTimer();
+        }
+
+        function nextSlide() {
+          if (!isMobile()) return;
+          goToSlide((current + 1) % total);
+        }
+
+        function resetTimer() {
           clearInterval(autoTimer);
           autoTimer = setInterval(nextSlide, 4000);
         }
 
-        function nextSlide() {
-          goToSlide((current + 1) % total);
-        }
-
         window.goToSlide = goToSlide;
 
+        // Auto-play
+        autoTimer = setInterval(nextSlide, 4000);
+
         // Touch/swipe support
-        let startX = 0;
-        slider.addEventListener('touchstart', e => startX = e.touches[0].clientX, { passive: true });
-        slider.addEventListener('touchend', e => {
-          const diff = startX - e.changedTouches[0].clientX;
-          if (Math.abs(diff) > 50) goToSlide(diff > 0 ? Math.min(current + 1, total - 1) : Math.max(current - 1, 0));
+        var startX = 0;
+        slider.addEventListener('touchstart', function (e) {
+          startX = e.touches[0].clientX;
         }, { passive: true });
+        slider.addEventListener('touchend', function (e) {
+          if (!isMobile()) return;
+          var diff = startX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) {
+            goToSlide(diff > 0 ? Math.min(current + 1, total - 1) : Math.max(current - 1, 0));
+          }
+        }, { passive: true });
+
+        // Reset on resize
+        window.addEventListener('resize', function () {
+          if (!isMobile()) {
+            clearInterval(autoTimer);
+            slider.style.transform = '';
+          } else {
+            goToSlide(0);
+          }
+        });
       })();
     </script>
   </div>

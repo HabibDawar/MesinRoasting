@@ -635,13 +635,17 @@ h4 {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  aspect-ratio: 4 / 3;
+  max-height: 420px;
 }
 
 .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform var(--transition-slow);
 }
 
@@ -924,11 +928,7 @@ h4 {
   background: var(--white);
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
+/* .testimonials-grid replaced by .testimonial-slider-wrapper */
 
 .testimonial-card {
   background: var(--light-warm);
@@ -1890,9 +1890,7 @@ h4 {
     gap: 24px;
   }
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
+  /* testimonials-grid removed, using slider */
 
   .katalog-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1979,6 +1977,7 @@ h4 {
 
   .about-image {
     max-height: 220px;
+    aspect-ratio: 16 / 9;
   }
 
   .about-image img {
@@ -2053,6 +2052,8 @@ h4 {
 
   .katalog-price {
     margin: 10px 0;
+    overflow: visible;
+    padding: 10px 8px;
   }
 
   .harga-asli {
@@ -2061,9 +2062,10 @@ h4 {
   }
 
   .harga-diskon-katalog {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     white-space: nowrap;
     display: block;
+    margin-bottom: 4px;
   }
 
   .badge-diskon {
