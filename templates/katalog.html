@@ -59,10 +59,8 @@
 
           <div class="katalog-price">
             <span class="harga-asli">{{ item['harga_asli'] | format_rupiah }}</span>
-            <span class="harga-diskon-katalog">
-              {{ item['harga'] | format_rupiah }}
-              <span class="badge-diskon">DISKON</span>
-            </span>
+            <span class="harga-diskon-katalog">{{ item['harga'] | format_rupiah }}</span>
+            <span class="badge-diskon">DISKON</span>
           </div>
 
           <div class="katalog-footer">
