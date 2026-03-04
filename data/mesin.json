@@ -1,172 +1,241 @@
 [
   {
-    "kapasitas": "1KG",
-    "judul": "MESIN ROASTING KOPI KAPASITAS 1 KG",
-    "harga": 12000000,
+    "kapasitas": "1kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 1KG",
+    "model": "RJ-1000",
+    "dimensi": "70x60x90 cm",
+    "daya": "2000 Watt",
+    "berat": "65 kg",
     "gambar": "1kg.jpg",
-    "model": "RR-100",
-    "dimensi": "80cm x 60cm x 120cm",
-    "daya": "1500W",
-    "berat": "85kg",
+    "harga": 13000000,
+    "harga_asli": 15600000,
     "spesifikasi": [
+      "Kapasitas: 1 kg per batch",
       "Tabung roasting full stainless steel (D 20 x P 25 cm)",
       "Rangka kuat dari siku besi dengan cover plat besi & stainless steel",
       "Sistem double jacket untuk kestabilan panas",
       "Single blower multifungsi: pendinginan & pengeluaran asap",
-      "Dilengkapi cooling tray untuk pendinginan cepat",
+      "Dilengkapi cooling tray untuk mendinginkan biji kopi dengan cepat",
       "Penampung asap & sampah, kaca pengintai, termometer",
-      "Kontrol otomatis: drum, blower, cooling, lampu + speed control",
-      "Kompor modifikasi hemat bahan bakar",
-      "Sistem penggerak elektrik dengan 2 dinamo dan gearbox rantai"
+      "Lampu penerangan & kontrol otomatis melalui 4 tombol",
+      "Pengaplan menggunakan kompor modifikasi hemat bahan bakar",
+      "Sistem penggerak elektrik dengan dua dinamo dan transmisi gearbox rantai"
     ],
     "keunggulan": [
-      "Desain customizable",
-      "Cocok untuk usaha kecil dan pemula"
+      "Desain customizable sesuai kebutuhan Anda",
+      "Cocok untuk usaha kecil, kafe, dan penggemar kopi pemula",
+      "Hemat energi dan mudah digunakan",
+      "Hasil roasting berkualitas profesional"
     ]
   },
   {
-    "kapasitas": "3KG",
-    "judul": "MESIN ROASTING KOPI KAPASITAS 3 KG",
-    "harga": 15000000,
+    "kapasitas": "3kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 3KG",
+    "model": "RJ-3000",
+    "dimensi": "90x80x120 cm",
+    "daya": "3500 Watt",
+    "berat": "120 kg",
     "gambar": "3kg.jpg",
-    "model": "RR-300",
-    "dimensi": "100cm x 70cm x 140cm",
-    "daya": "2200W",
-    "berat": "120kg",
-    "spesifikasi": [
-      "Drum stainless steel (2mm), D 25 cm, P 35 cm",
-      "Dinamo listrik 1/2 HP & 1/4 HP untuk pendingin",
-      "Konsumsi daya hanya 220W",
-      "Single blower multifungsi",
-      "Cyclone Separator Filter",
-      "Panel tombol kontrol lengkap",
-      "Kompor modifikasi + regulator",
-      "Kaca pengintai, termometer, roda mobilitas"
-    ],
-    "keunggulan": [
-      "Efisiensi tinggi",
-      "Hasil konsisten dan premium",
-      "Desain kokoh, bisa dikustomisasi"
-    ]
-  },
-  {
-    "kapasitas": "5KG",
-    "judul": "MESIN ROASTING KOPI KAPASITAS 5 KG",
     "harga": 16000000,
+    "harga_asli": 19200000,
+    "spesifikasi": [
+      "Kapasitas: 3 kg per batch",
+      "Drum berbahan plat stainless steel 2mm (diameter 25 cm, panjang 35 cm)",
+      "Body mesin dari stainless steel, rangka kuat berbahan besi",
+      "Dinamo listrik 1/2 HP untuk penggerak drum dan 1/4 HP untuk pendingin",
+      "Konsumsi daya listrik rendah hanya 220W",
+      "Sistem single blower multifungsi untuk pendinginan & pengeluaran asap",
+      "Dilengkapi Cyclone Separator Filter untuk menjaga kebersihan",
+      "Panel kelistrikan dengan tombol kontrol drum, blower, cooling, lampu",
+      "Kompor modifikasi lengkap dengan selang regulator",
+      "Tambahan fitur: kaca pengintai, termometer, checker tempel, roda 4 kaki"
+    ],
+    "keunggulan": [
+      "Efisiensi tinggi untuk meningkatkan produktivitas",
+      "Hasil roasting konsisten dan berkualitas premium",
+      "Desain kokoh dengan kemampuan kustomisasi",
+      "Cocok untuk roastery, kafe, atau usaha kopi skala menengah"
+    ]
+  },
+  {
+    "kapasitas": "5kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 5KG",
+    "model": "RJ-5000",
+    "dimensi": "120x70x160 cm",
+    "daya": "5000 Watt",
+    "berat": "180 kg",
     "gambar": "5kg.jpg",
-    "model": "RR-500",
-    "dimensi": "120cm x 70cm x 160cm",
-    "daya": "2500W",
-    "berat": "100kg",
+    "harga": 18000000,
+    "harga_asli": 21600000,
     "spesifikasi": [
-      "Drum stainless 2mm + sistem double jacket",
-      "Body & cooling tray full stainless",
-      "Rangka besi kokoh + roda",
-      "Cyclone separator",
-      "Panel kelistrikan lengkap",
-      "Pengapian gas modifikasi",
-      "Dimensi 120x70x160 cm, berat ±100kg"
+      "Kapasitas: 5 kg per batch",
+      "Tabung drum berbahan stainless steel tebal 2 mm",
+      "Sistem double jacket untuk kestabilan panas",
+      "Body full stainless steel termasuk cover roasting, corong input, dan cooling tray",
+      "Rangka kokoh berbahan besi dengan 4 roda untuk mobilitas",
+      "Sistem blower multifungsi untuk pendinginan dan pengeluaran asap",
+      "Cyclone separator untuk menjaga kebersihan dari sampah hasil roasting",
+      "Panel kelistrikan lengkap dengan tombol kontrol: Drum, Cooling, Blower, Lampu",
+      "Pengaplan modifikasi menggunakan bahan bakar gas dengan selang regulator",
+      "Dimensi keseluruhan: 120 x 70 x 160 cm"
     ],
     "keunggulan": [
-      "Kualitas premium",
-      "Efisiensi tinggi skala besar",
-      "Desain tahan lama & mudah digunakan"
+      "Hasil roasting konsisten dengan kualitas premium",
+      "Efisiensi tinggi untuk proses produksi skala besar",
+      "Mudah digunakan dan dirancang untuk daya tahan jangka panjang",
+      "Cocok untuk roastery profesional atau distributor kopi"
     ]
   },
   {
-    "kapasitas": "10KG",
-    "judul": "MESIN ROASTING KOPI KAPASITAS 10 KG",
-    "harga": 28000000,
+    "kapasitas": "10kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 10KG",
+    "model": "RJ-10000",
+    "dimensi": "140x90x180 cm",
+    "daya": "7500 Watt",
+    "berat": "250 kg",
     "gambar": "10kg.jpg",
-    "model": "RR-1000",
-    "dimensi": "140cm x 80cm x 180cm",
-    "daya": "3000W",
-    "berat": "150kg",
-    "spesifikasi": [
-      "Drum stainless 2mm, D 30 cm, P 50 cm",
-      "Cooling tray full stainless D 60 cm, T 25 cm",
-      "Kompor gas modifikasi",
-      "Kaca pengintai, checker, termometer manual",
-      "Blower + cyclone separator",
-      "Dinamo 1/2 HP & 1/4 HP",
-      "Panel: Drum, Cooling, Blower, Lampu, Speed Control"
-    ],
-    "keunggulan": [
-      "Roasting konsisten, rasa dan aroma terjaga",
-      "Efisiensi bahan bakar & listrik",
-      "Customizable dan user-friendly"
-    ]
-  },
-  {
-    "kapasitas": "15KG",
-    "judul": "MESIN ROASTING KOPI KAPASITAS 15 KG",
     "harga": 30000000,
+    "harga_asli": 36000000,
+    "spesifikasi": [
+      "Kapasitas: 10 kg per batch",
+      "Tabung drum stainless steel tebal 2 mm (diameter 30 cm, panjang 50 cm)",
+      "Cooling tray full stainless steel diameter 60 cm, tinggi 25 cm",
+      "Sumber panas menggunakan gas elpiji dengan kompor modifikasi hemat energi",
+      "Pengukur suhu dengan termometer manual, kaca pengintai, checker tempel",
+      "Lampu penerangan untuk memudahkan proses roasting",
+      "Blower hisap dan cyclone separator untuk menjaga kebersihan",
+      "Penggerak tabung menggunakan dinamo listrik 1/2 HP dengan transmisi gearbox",
+      "Penggerak cooling bean dinamo listrik 1/4 HP",
+      "Panel kelistrikan lengkap dengan Speed Control untuk pengaturan kecepatan"
+    ],
+    "keunggulan": [
+      "Hasil roasting konsisten, menjaga kualitas rasa dan aroma kopi",
+      "Efisiensi tinggi, hemat bahan bakar dan daya listrik",
+      "Desain kokoh dengan fitur yang mudah digunakan",
+      "Customizable sesuai kebutuhan Anda"
+    ]
+  },
+  {
+    "kapasitas": "15kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 15KG",
+    "model": "RJ-15000",
+    "dimensi": "160x100x200 cm",
+    "daya": "9000 Watt",
+    "berat": "350 kg",
     "gambar": "15kg.jpg",
-    "model": "RR-1500",
-    "dimensi": "160cm x 90cm x 200cm",
-    "daya": "3500W",
-    "berat": "200kg",
+    "harga": 32000000,
+    "harga_asli": 38400000,
     "spesifikasi": [
-      "Drum stainless 2mm, D 35 cm, P 60 cm",
-      "Cooling tray full stainless",
-      "Kaca pengintai, checker, termometer",
-      "Blower + cyclone separator",
-      "2 Dinamo listrik efisien",
-      "Pengapian gas modifikasi + regulator",
-      "Panel: Drum, Cooling, Blower, Lampu"
+      "Kapasitas: 15 kg per batch",
+      "Tabung drum stainless steel tebal 2 mm, diameter 35 cm, panjang 60 cm",
+      "Sistem double jacket untuk kestabilan panas",
+      "Cover roasting full stainless steel, termasuk tutup depan dan corong input",
+      "Cooling tray full stainless steel untuk pendinginan higienis",
+      "Kaca pengintai, checker tempel, termometer manual pegas untuk kontrol suhu",
+      "Lampu penerangan untuk kenyamanan proses roasting",
+      "Blower multifungsi dengan sistem cyclone separator untuk penampungan sampah",
+      "Penggerak menggunakan 2 dinamo listrik dengan efisiensi tinggi",
+      "Rangka mesin kokoh berbahan besi dengan 4 roda untuk mobilitas",
+      "Panel kelistrikan lengkap dengan semua tombol kontrol"
     ],
     "keunggulan": [
-      "Kualitas terjaga, efisiensi tinggi",
-      "Tahan lama dan mudah digunakan",
-      "Customizable untuk bisnis Anda"
+      "Hasil roasting konsisten, mempertahankan aroma dan cita rasa kopi",
+      "Efisiensi tinggi, hemat bahan bakar dan mudah dioperasikan",
+      "Desain kokoh, awet, dan mudah digunakan",
+      "Customizable sesuai kebutuhan bisnis Anda"
     ]
   },
   {
-    "kapasitas": "20KG",
-    "judul": "MESIN ROASTING KOPI KAPASITAS 20 KG",
-    "harga": 34000000,
+    "kapasitas": "20kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 20KG",
+    "model": "RJ-20000",
+    "dimensi": "180x120x220 cm",
+    "daya": "11000 Watt",
+    "berat": "450 kg",
     "gambar": "20kg.jpg",
-    "model": "RR-2000",
-    "dimensi": "180cm x 100cm x 220cm",
-    "daya": "4000W",
-    "berat": "250kg",
+    "harga": 35000000,
+    "harga_asli": 42000000,
     "spesifikasi": [
-      "Drum stainless 2mm + double jacket",
-      "Body full stainless",
-      "Cooling tray higienis + cyclone separator",
-      "Kaca pengintai, checker, lampu, termometer",
-      "2 Dinamo listrik efisien",
-      "Gas modifikasi + regulator",
-      "Panel: Drum, Cooling, Blower, Lampu, Speed Control"
+      "Kapasitas: 20 kg per batch",
+      "Tabung drum stainless steel tebal 2 mm dengan sistem double jacket",
+      "Body full stainless steel, termasuk cover roasting, corong input/output, dan cooling tray",
+      "Rangka mesin kokoh berbahan besi dengan 4 roda untuk mobilitas",
+      "Cooling tray full stainless steel untuk pendinginan higienis",
+      "Kaca pengintai untuk memantau proses roasting",
+      "Checker tempel dan termometer manual pegas untuk pengukuran suhu akurat",
+      "Lampu penerangan untuk kenyamanan proses roasting",
+      "Single blower multifungsi untuk pendinginan dan penghisapan asap",
+      "Cyclone separator untuk penampungan sampah",
+      "Penggerak menggunakan 2 dinamo listrik dengan efisiensi tinggi",
+      "Panel kelistrikan lengkap dengan Speed Control"
     ],
     "keunggulan": [
-      "Kualitas premium dan efisiensi tinggi",
-      "Cocok untuk skala besar",
-      "Desain awet dan intensif"
+      "Hasil roasting konsisten dengan kualitas premium",
+      "Efisiensi tinggi, hemat bahan bakar dan mudah dioperasikan",
+      "Desain kokoh, awet, dan dirancang untuk operasional intensif",
+      "Customizable sesuai kebutuhan bisnis Anda"
     ]
   },
   {
-    "kapasitas": "25KG",
-    "judul": "MESIN ROASTING KOPI KAPASITAS 25 KG",
-    "harga": 36000000,
+    "kapasitas": "25kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 25KG",
+    "model": "RJ-25000",
+    "dimensi": "200x130x240 cm",
+    "daya": "13000 Watt",
+    "berat": "600 kg",
     "gambar": "25kg.jpg",
-    "model": "RR-2500",
-    "dimensi": "200cm x 110cm x 240cm",
-    "daya": "4500W",
-    "berat": "300kg",
+    "harga": 37000000,
+    "harga_asli": 44400000,
     "spesifikasi": [
-      "Drum stainless 2mm + double jacket",
-      "Body + cooling tray full stainless",
-      "Blower + cyclone separator",
-      "Kaca pengintai, checker, lampu, termometer",
-      "2 Dinamo listrik 1 PK (400W)",
-      "Gas modifikasi + regulator",
-      "Panel: Drum, Cooling, Blower, Lampu, Speed Control"
+      "Kapasitas: 25 kg per batch",
+      "Tabung drum stainless steel tebal 2 mm dengan sistem double jacket",
+      "Body full stainless steel: cover roasting, corong input/output, dan cooling tray",
+      "Rangka mesin berbahan besi kokoh dengan 4 roda untuk mobilitas",
+      "Sistem blower multifungsi untuk pendinginan dan pembuangan asap",
+      "Cyclone separator untuk penampungan sampah",
+      "Kaca pengintai, checker tempel, lampu penerangan, termometer manual pegas",
+      "Penggerak menggunakan 2 dinamo listrik 1 PK (400 Watt)",
+      "Sumber panas menggunakan bahan bakar gas dengan kompor modifikasi",
+      "Panel kelistrikan modern dengan tombol kontrol dan Speed Control"
     ],
     "keunggulan": [
-      "Efisiensi tinggi untuk produksi industri",
-      "Roasting konsisten rasa dan aroma",
-      "Desain tahan lama & kontrol lengkap"
+      "Efisiensi tinggi, dirancang untuk produksi besar dengan konsumsi optimal",
+      "Hasil roasting konsisten, menjaga rasa dan aroma kopi premium",
+      "Desain kokoh dan tahan lama, ideal untuk operasional intensif",
+      "Sistem kontrol lengkap untuk memudahkan pengoperasian"
+    ]
+  },
+  {
+    "kapasitas": "50kg",
+    "judul": "Mesin Roasting Kopi Kapasitas 50KG",
+    "model": "RJ-50000",
+    "dimensi": "250x180x300 cm",
+    "daya": "15000 Watt",
+    "berat": "800 kg",
+    "gambar": "50kg.jpg",
+    "harga": 65000000,
+    "harga_asli": 78000000,
+    "spesifikasi": [
+      "Kapasitas: 50 kg per batch",
+      "Tabung drum stainless steel tebal 3 mm dengan sistem double jacket",
+      "Body full stainless steel grade 316 untuk ketahanan tinggi",
+      "Rangka konstruksi besi H-beam dengan 6 roda industrial",
+      "Sistem pendinginan water cooling terintegrasi",
+      "Dual blower system untuk sirkulasi udara optimal",
+      "Cyclone separator ukuran industrial dengan filter HEPA",
+      "Kontrol suhu digital PID dengan data logging",
+      "Penggerak menggunakan 3 dinamo listrik 2 PK",
+      "Panel kontrol PLC dengan touchscreen 10 inci",
+      "Sistem keamanan otomatis dan emergency stop",
+      "Remote monitoring via smartphone aplikasi"
+    ],
+    "keunggulan": [
+      "Kapasitas besar untuk produksi industri",
+      "Full automation dengan kontrol presisi tinggi",
+      "Energy efficient dengan recovery system",
+      "Low maintenance dan durability tinggi",
+      "After sales service 24/7",
+      "Training included untuk operator"
     ]
   }
 ]

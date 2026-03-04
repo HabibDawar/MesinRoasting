@@ -1,59 +1,109 @@
 {% extends "base.html" %}
-{% block title %}Kontak - RJGresik.id{% endblock %}
-{% block hero_content %}
+
+{% block title %}Kontak{% endblock %}
+
+{% block page_hero %}
+<section class="page-hero">
   <h1>Hubungi Kami</h1>
   <p class="hero-subtitle">Tim profesional kami siap membantu kebutuhan mesin roasting kopi Anda</p>
+</section>
 {% endblock %}
+
 {% block content %}
-<section class="about-section">
+<section class="contact-section">
   <div class="container">
-    <div class="section-header">
-      <h2>Kontak RJGresik.id</h2>
-      <p class="section-subtitle">Hubungi kami untuk informasi lebih lanjut tentang produk mesin roasting kopi</p>
-    </div>
-    <div class="contact-form-container">
-      <div class="contact-info">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="{{ url_for('index') }}">Beranda</a>
+      <span class="separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="current">Kontak</span>
+    </nav>
+
+    <div class="contact-grid">
+      <!-- Contact Info Card -->
+      <div class="contact-info-card reveal">
         <h3>Informasi Kontak</h3>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i> Benjeng, Gresik, Jawa Timur</li>
-          <li><i class="fas fa-phone-alt"></i> 085855614153</li>
-          <li><i class="fas fa-envelope"></i> habibdawar271003@gmail.com</li>
+        <p>Jangan ragu untuk menghubungi kami</p>
+
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Alamat</strong><br>
+              Benjeng, Gresik, Jawa Timur
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <strong>Telepon</strong><br>
+              085855614153 (Habib)
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong><br>
+              habibdawar271003@gmail.com
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Jam Operasional</strong><br>
+              Senin – Sabtu: 08.00 – 17.00 WIB
+            </div>
+          </li>
         </ul>
-      </div>
-      <div class="contact-form" style="text-align:center; margin-top: 30px;">
-        <a href="https://wa.me/6285855614153?text={{ 'Halo%2C%20saya%20tertarik%20dengan%20mesin%20roasting%20kopi%20RJGresik.id%2C%20bisa%20dibantu%20informasinya%3F' }}"
-           target="_blank"
-           class="btn btn-primary"
-           style="background-color: #25D366; border: none; padding: 15px 25px; font-size: 18px; border-radius: 8px; color: white; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 10px;">
+
+        <a href="https://wa.me/6285855614153?text=Halo%2C%20saya%20tertarik%20dengan%20mesin%20roasting%20kopi%20MesinRoastingKopi.com%2C%20bisa%20dibantu%20informasinya%3F"
+          target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%; justify-content:center;">
           <i class="fab fa-whatsapp"></i> Chat via WhatsApp
         </a>
-        <p style="margin-top: 10px; color: #666; font-size: 14px;">Klik tombol di atas untuk menghubungi kami langsung via WhatsApp</p>
+
+        <div class="contact-social">
+          <a href="https://www.facebook.com/marketplace/profile/100014038720035" target="_blank" rel="noopener"
+            aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/rjgresik" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/6285855614153" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-<section class="company-section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Lokasi Kami</h2>
-      <p class="section-subtitle">Kunjungi showroom kami untuk melihat produk secara langsung</p>
-    </div>
-    <div class="map-container">
-      <iframe
-        width="100%"
-        height="450"
-        frameborder="0"
-        scrolling="no"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=112.523%2C-7.184%2C112.533%2C-7.178&layer=mapnik&marker=-7.1811%2C112.5283"
-        style="border: 1px solid #ccc; border-radius: 10px">
-      </iframe>
-      <div style="text-align: center; margin-top: 20px;">
-        <a href="https://www.openstreetmap.org/?mlat=-7.1811&mlon=112.5283#map=15/-7.1811/112.5283"
-           target="_blank"
-           class="btn btn-secondary"
-           style="background-color: #007bff; border: none; padding: 12px 20px; font-size: 16px; border-radius: 6px; color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-          <i class="fas fa-external-link-alt"></i> Buka di OpenStreetMap
-        </a>
+
+      <!-- Contact Form Card -->
+      <div class="contact-form-card reveal reveal-delay-2">
+        <h3>Kirim Pesan</h3>
+        <p>Isi formulir di bawah dan kami akan segera menghubungi Anda</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Nomor HP</label>
+              <input type="tel" id="phone" name="phone" placeholder="Contoh: 08123456789" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" placeholder="Tulis pesan atau pertanyaan Anda di sini..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane"></i> Kirim Pesan
+          </button>
+        </form>
       </div>
     </div>
   </div>

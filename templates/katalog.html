@@ -2,55 +2,69 @@
 
 {% block title %}Katalog Mesin Roasting Kopi{% endblock %}
 
-{% block hero_content %}
+{% block page_hero %}
+<section class="page-hero">
   <h1>Katalog Mesin Roasting Kopi</h1>
   <p class="hero-subtitle">Temukan mesin roasting kopi terbaik untuk bisnis Anda</p>
+</section>
 {% endblock %}
 
 {% block content %}
 <section class="katalog-section">
   <div class="container">
-    <div class="section-header">
-      <h2>Produk Kami</h2>
-      <p class="section-subtitle">Berbagai kapasitas untuk kebutuhan bisnis Anda</p>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="{{ url_for('index') }}">Beranda</a>
+      <span class="separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="current">Katalog Produk</span>
+    </nav>
+
+    <div class="section-header reveal">
+      <span class="section-label">Produk Kami</span>
+      <h2>Berbagai Kapasitas untuk Kebutuhan Anda</h2>
+      <p class="section-subtitle">Dari skala rumahan 1 kg hingga industri 50 kg</p>
+      <div class="section-divider"></div>
     </div>
-    
+
     <div class="katalog-grid">
       {% for item in mesin %}
-      <div class="katalog-card">
+      <div class="katalog-card reveal reveal-delay-{{ loop.index0 % 3 + 1 }}">
         <div class="katalog-image">
-          <img src="{{ url_for('static', filename='img/' + item['gambar']) }}" 
-               alt="{{ item['judul'] }}" 
-               class="katalog-img">
+          <img src="{{ url_for('static', filename='img/' + item['gambar']) }}" alt="{{ item['judul'] }}"
+            class="katalog-img" loading="lazy">
           <div class="kapasitas-badge">Kapasitas {{ item['kapasitas'] }}</div>
         </div>
-        
+
         <div class="katalog-content">
           <h3>{{ item['judul'] }}</h3>
-          
+
           <div class="katalog-specs">
             <div class="spec-row">
-              <span class="spec-label">Model:</span>
+              <span class="spec-label">Model</span>
               <span class="spec-value">{{ item['model'] }}</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">Dimensi:</span>
+              <span class="spec-label">Dimensi</span>
               <span class="spec-value">{{ item['dimensi'] }}</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">Daya:</span>
+              <span class="spec-label">Daya</span>
               <span class="spec-value">{{ item['daya'] }}</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">Berat:</span>
+              <span class="spec-label">Berat</span>
               <span class="spec-value">{{ item['berat'] }}</span>
             </div>
           </div>
-          
+
           <div class="katalog-price">
-            {{ item['harga'] | format_rupiah }}
+            <span class="harga-asli">{{ item['harga_asli'] | format_rupiah }}</span>
+            <span class="harga-diskon-katalog">
+              {{ item['harga'] | format_rupiah }}
+              <span class="badge-diskon">DISKON</span>
+            </span>
           </div>
-          
+
           <div class="katalog-footer">
             <a href="{{ url_for('detail', kapasitas=item['kapasitas']) }}" class="btn-katalog">
               Lihat Detail <i class="fas fa-arrow-right"></i>

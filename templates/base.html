@@ -3,87 +3,256 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}{% endblock %} - RoastingKopi.id</title>
-  
-  <!-- CSS Utama -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  
+  <meta name="description" content="MesinRoastingKopi.com — Spesialis mesin roasting kopi profesional untuk bisnis Anda dari skala rumahan hingga industri. Berlokasi di Gresik, Jawa Timur.">
+
+  <title>{% block title %}{% endblock %} — MesinRoastingKopi.com</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <!-- Header -->
-  <header class="hero-header">
-    <div class="header-container">
-      <nav class="main-nav">
-        <div class="logo">
-          <span>RJGresik.id</span>
-        </div>
-        <div class="nav-links">
-          <a href="{{ url_for('index') }}" {% if request.path == '/' %}class="active"{% endif %}>Beranda</a>
-          <a href="{{ url_for('katalog') }}" {% if request.path == '/katalog' %}class="active"{% endif %}>Katalog</a>
-          <a href="{{ url_for('kontak') }}" {% if request.path == '/kontak' %}class="active"{% endif %}>Kontak</a>
-        </div>
-      </nav>
-      <div class="hero-content">
-        {% block hero_content %}{% endblock %}
-      </div>
-    </div>
-  </header>
 
-  <!-- Konten -->
+  <!-- Navbar -->
+  <nav class="navbar {% block navbar_class %}solid{% endblock %}" id="navbar">
+    <div class="nav-container">
+      <a href="{{ url_for('index') }}" class="nav-logo">
+        MesinRoastingKopi<span class="logo-dot">.com</span>
+      </a>
+      <div class="nav-links">
+        <a href="{{ url_for('index') }}" {% if request.path == '/' %}class="active"{% endif %}>Beranda</a>
+        <a href="{{ url_for('katalog') }}" {% if '/katalog' in request.path or '/detail' in request.path %}class="active"{% endif %}>Katalog</a>
+        <a href="{{ url_for('kontak') }}" {% if request.path == '/kontak' %}class="active"{% endif %}>Kontak</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('index') }}" {% if request.path == '/' %}class="active"{% endif %}>
+      <i class="fas fa-home"></i> Beranda
+    </a>
+    <a href="{{ url_for('katalog') }}" {% if '/katalog' in request.path or '/detail' in request.path %}class="active"{% endif %}>
+      <i class="fas fa-boxes-stacked"></i> Katalog
+    </a>
+    <a href="{{ url_for('kontak') }}" {% if request.path == '/kontak' %}class="active"{% endif %}>
+      <i class="fas fa-envelope"></i> Kontak
+    </a>
+  </div>
+
+  <!-- Page Hero (non-index pages) -->
+  {% block page_hero %}{% endblock %}
+
+  <!-- Main Content -->
   <main>
     {% block content %}{% endblock %}
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <!-- Tentang -->
-      <div class="footer-about">
-        <h3>RJGresik.id</h3>
-        <p>Spesialis mesin roasting kopi profesional untuk segala skala bisnis.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/marketplace/profile/100014038720035" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/rjgresik" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/6285855614153" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <h3>MesinRoastingKopi<span class="logo-dot">.com</span></h3>
+          <p>Spesialis mesin roasting kopi profesional untuk segala skala bisnis. Melayani seluruh Indonesia sejak 2010.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/marketplace/profile/100014038720035" target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/rjgresik" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/6285855614153" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-nav">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Beranda</a></li>
+            <li><a href="{{ url_for('katalog') }}">Katalog Produk</a></li>
+            <li><a href="{{ url_for('kontak') }}">Kontak Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>Hubungi Kami</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Benjeng, Gresik, Jawa Timur</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>085855614153 (Habib)</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>habibdawar271003@gmail.com</span>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <!-- Tautan Cepat -->
-      <div class="footer-links">
-        <h3>Tautan Cepat</h3>
-        <ul>
-          <li><a href="{{ url_for('index') }}">Beranda</a></li>
-          <li><a href="{{ url_for('katalog') }}">Katalog Produk</a></li>
-          <li><a href="{{ url_for('kontak') }}">Kontak Kami</a></li>
-        </ul>
-      </div>
-
-      <!-- Hubungi Kami -->
-      <div class="footer-contact">
-        <h3>Hubungi Kami</h3>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i> Benjeng, Gresik, Jawa Timur</li>
-          <li><i class="fas fa-phone-alt"></i> 085855614153 (Habib)</li>
-          <li><i class="fas fa-envelope"></i> habibdawar271003@gmail.com</li>
-        </ul>
-      </div>
     </div>
-
-    <!-- Footer Bawah -->
     <div class="footer-bottom">
-      <p>&copy; 2025 RJGresik.id. All rights reserved.</p>
+      <p>&copy; 2025 MesinRoastingKopi.com. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/6285855614153?text=Halo%2C%20saya%20tertarik%20dengan%20mesin%20roasting%20kopi%20MesinRoastingKopi.com%2C%20bisa%20dibantu%20informasinya%3F"
+     target="_blank" rel="noopener"
+     class="wa-float" aria-label="Chat WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll ke atas">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    (function () {
+      'use strict';
+
+      // === Navbar scroll effect ===
+      const navbar = document.getElementById('navbar');
+      const isTransparent = navbar.classList.contains('transparent');
+
+      function handleNavbarScroll() {
+        if (!isTransparent) return;
+        if (window.scrollY > 60) {
+          navbar.classList.add('scrolled');
+          navbar.classList.remove('transparent');
+        } else {
+          navbar.classList.remove('scrolled');
+          navbar.classList.add('transparent');
+        }
+      }
+
+      if (isTransparent) {
+        window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+      }
+
+      // === Hamburger menu ===
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileOverlay = document.getElementById('mobileOverlay');
+
+      function toggleMenu() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+        mobileOverlay.classList.toggle('show');
+        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+      mobileOverlay.addEventListener('click', toggleMenu);
+
+      // === Scroll to top ===
+      const scrollTopBtn = document.getElementById('scrollTop');
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('visible');
+        } else {
+          scrollTopBtn.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      scrollTopBtn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // === Scroll reveal (Intersection Observer) ===
+      const revealElements = document.querySelectorAll('.reveal');
+      if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(function (el) {
+          revealObserver.observe(el);
+        });
+      }
+
+      // === Counter animation ===
+      const counters = document.querySelectorAll('[data-count]');
+      if (counters.length > 0 && 'IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        counters.forEach(function (counter) {
+          counterObserver.observe(counter);
+        });
+      }
+
+      function animateCounter(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 2000;
+        var start = 0;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3); // ease out cubic
+          var current = Math.floor(eased * target);
+          el.textContent = current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      // === Parallax for hero ===
+      var heroBg = document.querySelector('.hero-bg');
+      if (heroBg) {
+        window.addEventListener('scroll', function () {
+          var scrolled = window.scrollY;
+          heroBg.style.transform = 'translateY(' + (scrolled * 0.35) + 'px)';
+        }, { passive: true });
+      }
+
+    })();
+  </script>
+
 </body>
 </html>
