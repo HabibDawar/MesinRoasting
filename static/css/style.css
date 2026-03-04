@@ -1916,15 +1916,15 @@ h1, h2, h3, h4 {
   }
 
   .section {
-    padding: 64px 0;
+    padding: 44px 0;
   }
 
   .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
   }
 
   .section-header h2 {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
 
   .hero {
@@ -1953,29 +1953,139 @@ h1, h2, h3, h4 {
   }
 
   .stage-card {
-    padding: 32px 24px;
+    padding: 20px 16px;
+  }
+
+  .stage-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  .stage-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .stage-card p {
+    font-size: 0.88rem;
   }
 
   .stats-row {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .stat-card {
-    padding: 28px 20px;
+    padding: 20px 14px;
   }
 
   .stat-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
   }
 
   .katalog-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .katalog-image {
+    height: 160px;
+  }
+
+  .katalog-content {
+    padding: 12px;
+  }
+
+  .katalog-content h3 {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .katalog-specs {
+    display: none;
+  }
+
+  .katalog-price {
+    margin: 10px 0;
+  }
+
+  .harga-asli {
+    font-size: 0.75rem;
+  }
+
+  .harga-diskon-katalog {
+    font-size: 1rem;
+  }
+
+  .badge-diskon {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  .btn-katalog {
+    padding: 9px 14px;
+    font-size: 0.8rem;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .kapasitas-badge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
   }
 
   .detail-content {
-    padding: 28px;
+    padding: 20px 16px;
+  }
+
+  .detail-content h1 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+
+  .harga-diskon {
+    font-size: 1.5rem;
+  }
+
+  .harga-asli {
+    font-size: 0.88rem;
+  }
+
+  .detail-price {
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+
+  .detail-specs h3,
+  .detail-features h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .spec-item {
+    padding: 8px 0;
+    font-size: 0.88rem;
+  }
+
+  .feature-item {
+    padding: 7px 0;
+    font-size: 0.88rem;
+  }
+
+  .detail-specs,
+  .detail-features {
+    margin-bottom: 20px;
+  }
+
+  .detail-cta .btn-whatsapp {
+    padding: 14px 24px;
+    font-size: 1rem;
   }
 
   .contact-info-card,
