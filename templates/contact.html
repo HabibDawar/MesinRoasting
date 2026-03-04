@@ -80,7 +80,11 @@
         <h3>Kirim Pesan</h3>
         <p>Isi formulir di bawah dan kami akan segera menghubungi Anda</p>
 
-        <form id="contactForm" novalidate>
+        <form id="contactForm" action="https://formspree.io/f/xreanjjz" method="POST" novalidate>
+          <!-- Field tersembunyi agar Formspree tahu subjek email -->
+          <input type="hidden" name="_subject" value="Pesan dari MesinRoastingKopi.com">
+          <input type="hidden" name="_next" value="">
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nama Lengkap</label>
@@ -100,10 +104,79 @@
             <textarea id="message" name="message" placeholder="Tulis pesan atau pertanyaan Anda di sini..."
               required></textarea>
           </div>
-          <button type="submit" class="btn-submit">
+
+          <!-- Pesan sukses (tersembunyi default) -->
+          <div id="formSuccess"
+            style="display:none; background:#d4edda; color:#155724; padding:14px 18px; border-radius:10px; margin-bottom:16px; font-size:0.95rem;">
+            <i class="fas fa-check-circle"></i> Pesan berhasil dikirim! Kami akan segera menghubungi Anda.
+          </div>
+          <div id="formError"
+            style="display:none; background:#f8d7da; color:#721c24; padding:14px 18px; border-radius:10px; margin-bottom:16px; font-size:0.95rem;">
+            <i class="fas fa-exclamation-circle"></i> Gagal mengirim. Silakan coba lagi atau hubungi via WhatsApp.
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
             <i class="fas fa-paper-plane"></i> Kirim Pesan
           </button>
         </form>
+
+        <script>
+          (function () {
+            var form = document.getElementById('contactForm');
+            var btn = document.getElementById('submitBtn');
+            var successMsg = document.getElementById('formSuccess');
+            var errorMsg = document.getElementById('formError');
+
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+
+              // Validasi sederhana
+              var name = form.querySelector('#name').value.trim();
+              var phone = form.querySelector('#phone').value.trim();
+              var email = form.querySelector('#email').value.trim();
+              var message = form.querySelector('#message').value.trim();
+
+              if (!name || !phone || !message) {
+                errorMsg.innerHTML = '<i class="fas fa-exclamation-circle"></i> Mohon isi semua field yang wajib diisi.';
+                errorMsg.style.display = 'block';
+                successMsg.style.display = 'none';
+                return;
+              }
+
+              // Loading state
+              btn.disabled = true;
+              btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+              successMsg.style.display = 'none';
+              errorMsg.style.display = 'none';
+
+              // Kirim via fetch ke Formspree
+              var data = new FormData(form);
+              fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+              })
+                .then(function (response) {
+                  if (response.ok) {
+                    successMsg.style.display = 'block';
+                    form.reset();
+                    btn.innerHTML = '<i class="fas fa-check"></i> Terkirim!';
+                    setTimeout(function () {
+                      btn.disabled = false;
+                      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Pesan';
+                    }, 3000);
+                  } else {
+                    throw new Error('Server error');
+                  }
+                })
+                .catch(function () {
+                  errorMsg.style.display = 'block';
+                  btn.disabled = false;
+                  btn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Pesan';
+                });
+            });
+          })();
+        </script>
       </div>
     </div>
   </div>
